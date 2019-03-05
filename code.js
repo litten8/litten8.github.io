@@ -64,7 +64,6 @@ var fatcrushbutton = document.getElementById("fatcrushbutton");
 var feedbutton = document.getElementById("feedbutton");
 var chopbutton = document.getElementById("chopbutton");
 var trainbutton = document.getElementById("trainbutton");
-var cheatbutton = document.getElementById("cheatbutton");
 var crusherbutton = document.getElementById("crusherbutton");
 var choptrainbutton = document.getElementById("choptrainbutton");
 var crafttrainbutton = document.getElementById("crafttrainbutton");
@@ -109,7 +108,6 @@ var studiers=0;
 var warderps=0;
 var crushers=0;
 var unkill=0;
-var cheatcode="MAKE MORE BLOODY DERPY LIONS!!!";
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
 stuffratebutton.addEventListener("click", StuffUp);
@@ -135,7 +133,6 @@ housebutton.addEventListener("click", House);
 unpinbutton.addEventListener("click", Unpin);
 crusherbutton.addEventListener("click", Crusher);
 battlebutton.addEventListener("click", Battle);
-cheatbutton.addEventListener("click", Cheat);
 abandonbutton.addEventListener("click", Abandon);
 goopaxebutton.addEventListener("click", GoopAxe);
 vineaxebutton.addEventListener("click", VineAxe);
@@ -545,30 +542,6 @@ function KillUnderp(){
             axebreak=0;
         }
     }
-}
-function Cheat(){
-    var x=prompt("Enter the cheat code");
-    if(x!=cheatcode){
-        return;
-    }
-    smarts+=10000
-    axes+=50;
-    meat+=100;
-    know=true;
-    youknow=true;
-    unrising=true;
-    underps+=17;
-    warderps+=2;
-    crafters+=1;
-    houses+=1;
-    choppers+=1;
-    gatherers+=5;
-    studiers+=1;
-    stuffrate+=100;
-    thingsrate+=100;
-    lives+=3
-    goop+=200
-    crushers+=5
 }
 function Battle(){
     if(Math.random()<0.0003125){
