@@ -108,6 +108,7 @@ var studiers=0;
 var warderps=0;
 var crushers=0;
 var unkill=0;
+var ungoop = 0;
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
 stuffratebutton.addEventListener("click", StuffUp);
@@ -160,6 +161,7 @@ function update(){
     warn.innerHTML=warderps;
     crushn.innerHTML=crushers;
     underpn.innerHTML=Math.floor(underps);
+    ungoopn.innerHTML=ungoop;
     if(smarts<0){
         alert("The unthings have taken all of your smarts.")
         Die();
@@ -409,6 +411,11 @@ function update(){
     }else{
         battlebutton.style.display='none';
     }
+    if(ungoop>0){
+        ungoopdisplay.style.display='block';
+    }else{
+        ungoopdisplay.style.display='none';
+    }
     if(know){
         document.querySelectorAll('.things').forEach(function(e) {
             e.innerHTML="derps";
@@ -532,7 +539,7 @@ function KillUnderp(){
     }else if(Math.random()<1-(0.95/dcmod)){
         underps-=1
         meat+=1;
-        goop+=2;
+        ungoop+=2;
         if(Math.random()<0.1){
             axes+=1;
         }
@@ -544,17 +551,17 @@ function KillUnderp(){
     }
 }
 function Battle(){
-    if(Math.random()<0.0003125){
+    if(Math.random()<0.001){
         pinned=true;
         axebreak+=1;
         if(axebreak==10){
             axes-=1;
             axebreak=0;
         }
-    }else if(Math.random()<0.940625){
+    }else if(Math.random()<0.99){
         underps-=1
         meat+=1;
-        goop+=2;
+        ungoop+=2;
         if(Math.random()<0.1){
             axes+=1;
         }
@@ -644,7 +651,7 @@ function Throw(){
 }
 function Learn(){
     smarts+=20;
-    alert("The derpy lion explains to you everything about the world. They explain that the stuff you are holding is called a rock, and that what you called things are actually called derps. They also explain how the pillars around you are called trees. They explain to you many more things that will probably come in handy soon.")
+    alert("The derpy lion explains to you everything about the world. They explain that the stuff you are holding is called a rock, and that what you called things are actually animals called derps. They also explain how the pillars around you are called trees. They explain to you many more things that will probably come in handy soon.")
     know=true;
 }
 function Stuff(){
