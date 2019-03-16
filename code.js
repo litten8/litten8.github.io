@@ -346,6 +346,11 @@ function update(){
     }else{
         meatdisplay.style.display='none';
     }
+    if(loyalty>0){
+        loyaltydisplay.style.display='block';
+    }else{
+        loyaltydisplay.style.display='none';
+    }
     if(stuff>0 && things>0 && know){
         crushbutton.style.display='block';
     }else{
