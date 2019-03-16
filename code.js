@@ -24,6 +24,9 @@ var studyn = document.getElementById("studyn");
 var warn = document.getElementById("warn");
 var crushn = document.getElementById("crushn");
 var underpn = document.getElementById("underpn");
+var ungoopn = document.getElementById("ungoopn");
+var statuen = document.getElementById("statuen");
+var loyaltyn = document.getElementById("loyaltyn");
 var smartdisplay = document.getElementById("smarty");
 var sticksdisplay = document.getElementById("sticksy");
 var barkdisplay = document.getElementById("barky");
@@ -43,6 +46,9 @@ var craftdisplay = document.getElementById("crafty");
 var studydisplay = document.getElementById("studyy");
 var wardisplay = document.getElementById("wary");
 var underpdisplay = document.getElementById("underpy");
+var ungoopdisplay = document.getElementById("ungoopy");
+var statuedisplay = document.getElementById("statuey");
+var loyaltydisplay = document.getElementById("loyaltyy");
 var stuffbutton = document.getElementById("stuffbutton");
 var thingsratebutton = document.getElementById("thingsratebutton");
 var stuffratebutton = document.getElementById("stuffratebutton");
@@ -70,6 +76,7 @@ var crafttrainbutton = document.getElementById("crafttrainbutton");
 var studytrainbutton = document.getElementById("studytrainbutton");
 var wartrainbutton = document.getElementById("wartrainbutton");
 var abandonbutton = document.getElementById("abandonbutton");
+var statuebutton = document.getElementById("statuebutton");
 var thingscostn = document.getElementById("thingscostn");
 var stuffcostn = document.getElementById("stuffcostn");
 var things=0;
@@ -109,6 +116,8 @@ var warderps=0;
 var crushers=0;
 var unkill=0;
 var ungoop = 0;
+var statues=0;
+var loyalty=0;
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
 stuffratebutton.addEventListener("click", StuffUp);
@@ -137,6 +146,7 @@ battlebutton.addEventListener("click", Battle);
 abandonbutton.addEventListener("click", Abandon);
 goopaxebutton.addEventListener("click", GoopAxe);
 vineaxebutton.addEventListener("click", VineAxe);
+statuebutton.addEventListener("click", Statue);
 function update(){
     thingsn.innerHTML=Math.floor(things);
     stuffn.innerHTML=Math.floor(stuff);
@@ -162,6 +172,8 @@ function update(){
     crushn.innerHTML=crushers;
     underpn.innerHTML=Math.floor(underps);
     ungoopn.innerHTML=ungoop;
+    statuen.innerHTML=statues;
+    loyaltyn.innerHTML=loyalty;
     if(smarts<0){
         alert("The unthings have taken all of your smarts.")
         Die();
@@ -171,9 +183,7 @@ function update(){
         smarts=0;
         lives=1;
         thingsrate=0.05;
-        stuffrate=1;
-        thingsrate=0.05;
-        stuffrate=1;
+        stuffrate=1
     }
     if(smarts<17){
         youknow=false;
@@ -401,6 +411,11 @@ function update(){
     }else{
         vineaxebutton.style.display='none';
     }
+    if(ungoop>=100 && smarts>=187){
+        statuebutton.style.display='block';
+    }else{
+        statuebutton.style.display='none';
+    }
     if(pinned){
         unpinbutton.style.display='block';
     }else{
@@ -415,6 +430,11 @@ function update(){
         ungoopdisplay.style.display='block';
     }else{
         ungoopdisplay.style.display='none';
+    }
+    if(statues>0){
+        statuedisplay.style.display='block';
+    }else{
+        statuedisplay.style.display='none';
     }
     if(know){
         document.querySelectorAll('.things').forEach(function(e) {
@@ -608,18 +628,31 @@ function Die(){
     logs=0;
     thingscost = 3;
     stuffcost = 3;
-    underps+=gatherers;
+    var nunderps = 0
+    nunderps+=gatherers;
     gatherers=0;
-    underps+=choppers;
+    nunderps+=choppers;
     choppers=0;
-    underps+=crafters;
+    nunderps+=crafters;
     crafters=0;
-    underps+=studiers;
+    nunderps+=studiers;
     studiers=0;
-    underps+=warderps;
+    nunderps+=warderps;
+    if (nunderps >= loyalty) {
+      things += nunderps;
+      nunderps -= loyalty;
+      loyalty = 0;
+      underps -= nunderps;
+    } else {
+      things = nunderps
+      loyalty -= nunderps
+      nunderps = 0
+    }
     warderps=0;
     houses=0;
-    crushers=0
+    crushers=0;
+    ungoop=0;
+    statues-=10;
     dead=true;
 }
 function Rebirth(){
@@ -683,6 +716,11 @@ function StuffUp(){
     things-=stuffcost;
     stuffrate+=1;
     stuffcost*=2;
+}
+function Statue(){
+  ungoop -= 100
+  statues += 1
+  loyalty += 1
 }
 function always(){
     if(!dead){
@@ -759,6 +797,9 @@ function always(){
                     }
                 }
             }
+        }
+        if(statues>0) {
+          loyalty += statues/100
         }
     }
     if(underps>0){
