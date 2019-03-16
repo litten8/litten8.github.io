@@ -647,7 +647,7 @@ function Die(){
       things += nunderps;
       nunderps -= loyalty;
       loyalty = 0;
-      underps -= nunderps;
+      underps += nunderps;
     } else {
       things = nunderps
       loyalty -= nunderps
