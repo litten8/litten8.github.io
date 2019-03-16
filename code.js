@@ -765,7 +765,7 @@ function always(){
         if(unrising && underps>0 && pinned){
             smarts-=underps/80;
         }
-        if(unrising && underps>0 && !pinned && Math.random()>0.99) {
+        if(unrising && underps>0 && !pinned && Math.random()>0.999) {
           pinned = true;
         }
         if(studiers>0 && stuff>=1){
