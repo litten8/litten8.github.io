@@ -789,13 +789,13 @@ function always(){
                 }
             }
         }
-        if(crushers>0 && stuff>=1 && things>=1){
-            crush+=(crushers/80);
+        if(crushers>0 && stuff>=1 && fatderps>=1){
+            crush+=(crushers/800);
             if(crush>=1){
                 var crushes = Math.floor(crush);
-                for(var i = 0; i<=kills; i++){
+                for(var i = 0; i<=crushes; i++){
                     crush-=1;
-                    if(things>=1 && stuff>=1 && Math.random()>0.9){
+                    if(fatderps>=1 && stuff>=1){
                         FatCrush();
                     }else{
                         stuff-=1
