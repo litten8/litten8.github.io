@@ -762,8 +762,11 @@ function always(){
             apples-=houses/40;
             fatderps+=houses/40;
         }
-        if(unrising && underps>0){
+        if(unrising && underps>0 && pinned){
             smarts-=underps/80;
+        }
+        if(unrising && underps>0 && !pinned && Math.random()>0.99) {
+          pinned = true;
         }
         if(studiers>0 && stuff>=1){
             study+=(studiers/40)*(2**houses);
