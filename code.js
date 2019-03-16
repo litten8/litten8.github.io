@@ -674,6 +674,20 @@ function Rebirth(){
         warderps+=2;
         axes+=warderps+1;
     }
+    for (var i = 0; i<loyalty; i++) {
+      if (Math.random()<0.01) {
+        gatherers+=1;
+      }if (Math.random()<0.01) {
+        choppers+=1;
+        axes+=1;
+      }if (Math.random()<0.01) {
+        choppers+=1;
+        warderps+=1;
+        axes+=1;
+      }if (Math.random()<0.01) {
+        studiers+=1;
+      }
+    }
 }
 function Throw(){
     stuff-=1;
