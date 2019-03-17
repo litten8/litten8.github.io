@@ -8,3 +8,6 @@
   top: 15px;
   font-size: 20px;
 }
+.layout {
+  white-space: nowrap;
+}
