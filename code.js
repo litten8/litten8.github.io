@@ -192,9 +192,9 @@ function update(){
         know=false;
     }
     if(!dead && !pinned){
-        stuffbutton.style.display='block';
+        stuffbutton.style.visibility='visible';
     }else{
-        stuffbutton.style.display='none';
+        stuffbutton.style.visibility='hidden';
     }
     if(dead){
         derpylion.style.display='block';
@@ -202,244 +202,244 @@ function update(){
         derpylion.style.display='none';
     }
     if(stuff>0 && things>0 && !know){
-        ponderbutton.style.display='block';
+        ponderbutton.style.visibility='visible';
     }else{
-        ponderbutton.style.display='none';
+        ponderbutton.style.visibility='hidden';
     }
     if(smarts>0){
-        smarty.style.display='block';
+        smarty.style.visibility='visible';
     }else{
-        smarty.style.display='none';
+        smarty.style.visibility='hidden';
     }
     if(smarts>=17 && !youknow){
-        youbutton.style.display='block';
+        youbutton.style.visibility='visible';
     }else{
-        youbutton.style.display='none';
+        youbutton.style.visibility='hidden';
     }
     if(youknow && stuff>=1 && !dead){
-        diebutton.style.display='block';
+        diebutton.style.visibility='visible';
     }else{
-        diebutton.style.display='none';
+        diebutton.style.visibility='hidden';
     }
     if(axes>=1 && !dead){
-        axediebutton.style.display='block';
+        axediebutton.style.visibility='visible';
     }else{
-        axediebutton.style.display='none';
+        axediebutton.style.visibility='hidden';
     }
     if(dead){
-        rebirthbutton.style.display='block';
+        rebirthbutton.style.visibility='visible';
     }else{
-        rebirthbutton.style.display='none';
+        rebirthbutton.style.visibility='hidden';
     }
     if(stuff>=thingscost){
-        thingsratebutton.style.display='block';
+        thingsratebutton.style.visibility='visible';
     }else{
-        thingsratebutton.style.display='none';
+        thingsratebutton.style.visibility='hidden';
     }
     if(things>=stuffcost){
-        stuffratebutton.style.display='block';
+        stuffratebutton.style.visibility='visible';
     }else{
-        stuffratebutton.style.display='none';
+        stuffratebutton.style.visibility='hidden';
     }
     if(lives>1){
-        livesdisplay.style.display='block';
+        livesdisplay.style.visibility='visible';
     }else{
-        livesdisplay.style.display='none';
+        livesdisplay.style.visibility='hidden';
     }
     if(stuff>=1 && smarts>=34 && !dead){
-        studystuffbutton.style.display='block';
+        studystuffbutton.style.visibility='visible';
     }else{
-        studystuffbutton.style.display='none';
+        studystuffbutton.style.visibility='hidden';
     }
     if(things>=1 && smarts>=34){
-        studythingbutton.style.display='block';
+        studythingbutton.style.visibility='visible';
     }else{
-        studythingbutton.style.display='none';
+        studythingbutton.style.visibility='hidden';
     }
     if(dead && smarts>=51 && !know){
-        knowbutton.style.display='block';
+        knowbutton.style.visibility='visible';
     }else{
-        knowbutton.style.display='none';
+        knowbutton.style.visibility='hidden';
     }
     if(know && stuff>0 && !dead){
-        throwbutton.style.display='block';
+        throwbutton.style.visibility='visible';
     }else{
-        throwbutton.style.display='none';
+        throwbutton.style.visibility='hidden';
     }
     if(bark>0){
-        barkdisplay.style.display='block';
+        barkdisplay.style.visibility='visible';
     }else{
-        barkdisplay.style.display='none';
+        barkdisplay.style.visibility='hidden';
     }
     if(logs>0){
-        logdisplay.style.display='block';
+        logdisplay.style.visibility='visible';
     }else{
-        logdisplay.style.display='none';
+        logdisplay.style.visibility='hidden';
     }
     if(houses>0){
-        housedisplay.style.display='block';
+        housedisplay.style.visibility='visible';
     }else{
-        housedisplay.style.display='none';
+        housedisplay.style.visibility='hidden';
     }
     if(axes>0){
-        axedisplay.style.display='block';
+        axedisplay.style.visibility='visible';
     }else{
-        axedisplay.style.display='none';
+        axedisplay.style.visibility='hidden';
     }
     if(fatderps>0){
-        fatdisplay.style.display='block';
+        fatdisplay.style.visibility='visible';
     }else{
-        fatdisplay.style.display='none';
+        fatdisplay.style.visibility='hidden';
     }
     if(sticks>0){
-        sticksdisplay.style.display='block';
+        sticksdisplay.style.visibility='visible';
     }else{
-        sticksdisplay.style.display='none';
+        sticksdisplay.style.visibility='hidden';
     }
     if(vines>0){
-        vinesdisplay.style.display='block';
+        vinesdisplay.style.visibility='visible';
     }else{
-        vinesdisplay.style.display='none';
+        vinesdisplay.style.visibility='hidden';
     }
     if(apples>0){
-        applesdisplay.style.display='block';
+        applesdisplay.style.visibility='visible';
     }else{
-        applesdisplay.style.display='none';
+        applesdisplay.style.visibility='hidden';
     }
     if(gatherers>0){
-        gatherdisplay.style.display='block';
+        gatherdisplay.style.visibility='visible';
     }else{
-        gatherdisplay.style.display='none';
+        gatherdisplay.style.visibility='hidden';
     }
     if(choppers>0){
-        chopdisplay.style.display='block';
+        chopdisplay.style.visibility='visible';
     }else{
-        chopdisplay.style.display='none';
+        chopdisplay.style.visibility='hidden';
     }
     if(crafters>0){
-        craftdisplay.style.display='block';
+        craftdisplay.style.visibility='visible';
     }else{
-        craftdisplay.style.display='none';
+        craftdisplay.style.visibility='hidden';
     }
     if(studiers>0){
-        studydisplay.style.display='block';
+        studydisplay.style.visibility='visible';
     }else{
-        studydisplay.style.display='none';
+        studydisplay.style.visibility='hidden';
     }
     if(warderps>0){
-        wardisplay.style.display='block';
+        wardisplay.style.visibility='visible';
     }else{
-        wardisplay.style.display='none';
+        wardisplay.style.visibility='hidden';
     }
     if(crushers>0){
-        crushdisplay.style.display='block';
+        crushdisplay.style.visibility='visible';
     }else{
-        crushdisplay.style.display='none';
+        crushdisplay.style.visibility='hidden';
     }
     if(goop>0){
-        goopdisplay.style.display='block';
+        goopdisplay.style.visibility='visible';
     }else{
-        goopdisplay.style.display='none';
+        goopdisplay.style.visibility='hidden';
     }
     if(meat>0){
-        meatdisplay.style.display='block';
+        meatdisplay.style.visibility='visible';
     }else{
-        meatdisplay.style.display='none';
+        meatdisplay.style.visibility='hidden';
     }
     if(loyalty>0){
-        loyaltydisplay.style.display='block';
+        loyaltydisplay.style.visibility='visible';
     }else{
-        loyaltydisplay.style.display='none';
+        loyaltydisplay.style.visibility='hidden';
     }
     if(stuff>0 && things>0 && know){
-        crushbutton.style.display='block';
+        crushbutton.style.visibility='visible';
     }else{
-        crushbutton.style.display='none';
+        crushbutton.style.visibility='hidden';
     }
     if(meat>0 && things>0 && smarts>=85){
-        trainbutton.style.display='block';
+        trainbutton.style.visibility='visible';
     }else{
-        trainbutton.style.display='none';
+        trainbutton.style.visibility='hidden';
     }
     if(logs>=50 && stuff>=1 && vines>=10 && smarts>=527){
-        crusherbutton.style.display='block';
+        crusherbutton.style.visibility='visible';
     }else{
-        crusherbutton.style.display='none';
+        crusherbutton.style.visibility='hidden';
     }
     if(meat>=10 && things>0 && smarts>=204 && axes>0){
-        choptrainbutton.style.display='block';
+        choptrainbutton.style.visibility='visible';
     }else{
-        choptrainbutton.style.display='none';
+        choptrainbutton.style.visibility='hidden';
     }
     if(meat>=20 && things>0 && smarts>=255 && houses>0){
-        crafttrainbutton.style.display='block';
+        crafttrainbutton.style.visibility='visible';
     }else{
-        crafttrainbutton.style.display='none';
+        crafttrainbutton.style.visibility='hidden';
     }
     if(meat>=40 && smarts>=323){
-        studytrainbutton.style.display='block';
+        studytrainbutton.style.visibility='visible';
     }else{
-        studytrainbutton.style.display='none';
+        studytrainbutton.style.visibility='hidden';
     }
     if(meat>=10 && smarts>=408 && unrising){
-        wartrainbutton.style.display='block';
+        wartrainbutton.style.visibility='visible';
     }else{
-        wartrainbutton.style.display='none';
+        wartrainbutton.style.visibility='hidden';
     }
     if(stuff>0 && fatderps>0){
-        fatcrushbutton.style.display='block';
+        fatcrushbutton.style.visibility='visible';
     }else{
-        fatcrushbutton.style.display='none';
+        fatcrushbutton.style.visibility='hidden';
     }
     if(axes>0 && !dead && !pinned){
-        chopbutton.style.display='block';
+        chopbutton.style.visibility='visible';
     }else{
-        chopbutton.style.display='none';
+        chopbutton.style.visibility='hidden';
     }
     if(apples>0 && things>0 && know){
-        feedbutton.style.display='block';
+        feedbutton.style.visibility='visible';
     }else{
-        feedbutton.style.display='none';
+        feedbutton.style.visibility='hidden';
     }
     if(goop>0 && sticks>0 && stuff>0 && smarts>=119){
-        goopaxebutton.style.display='block';
+        goopaxebutton.style.visibility='visible';
     }else{
-        goopaxebutton.style.display='none';
+        goopaxebutton.style.visibility='hidden';
     }
     if(goop>=50 && logs>=500 && bark>2500 && smarts>=170){
-        housebutton.style.display='block';
+        housebutton.style.visibility='visible';
     }else{
-        housebutton.style.display='none';
+        housebutton.style.visibility='hidden';
     }
     if(vines>0 && sticks>0 && stuff>0 && smarts>=119){
-        vineaxebutton.style.display='block';
+        vineaxebutton.style.visibility='visible';
     }else{
-        vineaxebutton.style.display='none';
+        vineaxebutton.style.visibility='hidden';
     }
     if(ungoop>=100 && smarts>=187){
-        statuebutton.style.display='block';
+        statuebutton.style.visibility='visible';
     }else{
-        statuebutton.style.display='none';
+        statuebutton.style.visibility='hidden';
     }
     if(pinned){
-        unpinbutton.style.display='block';
+        unpinbutton.style.visibility='visible';
     }else{
-        unpinbutton.style.display='none';
+        unpinbutton.style.visibility='hidden';
     }
     if(axes>=1 && underps>=1 && unrising && !pinned){
-        battlebutton.style.display='block';
+        battlebutton.style.visibility='visible';
     }else{
-        battlebutton.style.display='none';
+        battlebutton.style.visibility='hidden';
     }
     if(ungoop>0){
-        ungoopdisplay.style.display='block';
+        ungoopdisplay.style.visibility='visible';
     }else{
-        ungoopdisplay.style.display='none';
+        ungoopdisplay.style.visibility='hidden';
     }
     if(statues>0){
-        statuedisplay.style.display='block';
+        statuedisplay.style.visibility='visible';
     }else{
-        statuedisplay.style.display='none';
+        statuedisplay.style.visibility='hidden';
     }
     if(know){
         document.querySelectorAll('.things').forEach(function(e) {
@@ -459,14 +459,14 @@ function update(){
         thingcreation.innerHTML="thing creation"
     }
     if(unrising && !dead){
-        underpdisplay.style.display='block';
+        underpdisplay.style.visibility='visible';
     }else{
-        underpdisplay.style.display='none';
+        underpdisplay.style.visibility='hidden';
     }
     if(unrising && !dead && know){
-        abandonbutton.style.display='block';
+        abandonbutton.style.visibility='visible';
     }else{
-        abandonbutton.style.display='none';
+        abandonbutton.style.visibility='hidden';
     }
 }
 function Crush(){
