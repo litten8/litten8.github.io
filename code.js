@@ -664,6 +664,7 @@ function Rebirth(){
     dead=false;
     lives+=1
     if(underps>=16 || unrising){
+        underps = 16
         unrising=true;
         alert("A strange looking derp holding an axe to your neck says that it was one of the derps you have abandoned by dying. It says that all the derps you have abandoned have made an empire, and are calling themselves underps. They are starting an uprising, or actually, an unrising. Then the underps pin you down and start to gather away your smarts.")
         pinned=true;
@@ -776,10 +777,10 @@ function always(){
             apples-=houses/40;
             fatderps+=houses/40;
         }
-        if(unrising && underps>0 && pinned){
-            smarts-=underps/80;
+        if(unrising && underps>9 && pinned){
+            smarts-=underps/800;
         }
-        if(unrising && underps>0 && !pinned && Math.random()>0.999) {
+        if(unrising && underps>8 && !pinned && Math.random()>0.999) {
           pinned = true;
         }
         if(studiers>0 && stuff>=1){
