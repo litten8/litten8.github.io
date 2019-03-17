@@ -8,47 +8,7 @@ try {
  window.localStorage.clear();
 }
 if (!state) {
- state = {
-   things: 0,
-   stuff: 0,
-   lives: 1,
-   thingsrate: 0.05,
-   stuffrate: 1,
-   thingscost: 3,
-   stuffcost: 3,
-   smarts: 0,
-   youknow: false,
-   dead: false,
-   know: false,
-   bark: 0,
-   sticks: 0,
-   vines: 0,
-   apples: 0,
-   goop: 0,
-   meat: 0,
-   fatderps: 0,
-   gatherers: 0,
-   choppers: 0,
-   axes: 0,
-   logs: 0,
-   houses: 0,
-   treechop: 0,
-   crush: 0,
-   axecraft: 0,
-   study: 0,
-   axebreak: 0,
-   crafters: 0,
-   underps: 0,
-   unrising: false,
-   pinned: false,
-   studiers: 0,
-   warderps: 0,
-   crushers: 0,
-   unkill: 0,
-   ungoop: 0,
-   statues: 0,
-   loyalty: 0,
- };
+ ResetGame();
 }
 window.localStorage.setItem('state', JSON.stringify(state));
 
@@ -129,6 +89,7 @@ var wartrainbutton = document.getElementById("wartrainbutton");
 var abandonbutton = document.getElementById("abandonbutton");
 var statuebutton = document.getElementById("statuebutton");
 var thingscostn = document.getElementById("thingscostn");
+var resetbutton = document.getElementById("resetbutton");
 var stuffcostn = document.getElementById("stuffcostn");
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
@@ -159,6 +120,7 @@ abandonbutton.addEventListener("click", Abandon);
 goopaxebutton.addEventListener("click", GoopAxe);
 vineaxebutton.addEventListener("click", VineAxe);
 statuebutton.addEventListener("click", Statue);
+resetbutton.addEventListener("click", Reset);
 function update(){
     thingsn.innerHTML=Math.floor(state.things);
     stuffn.innerHTML=Math.floor(state.stuff);
@@ -494,6 +456,55 @@ function FatCrush(){
     }else{
         state.meat+=1;
     }
+}
+function Reset(){
+  var resetconfirm = confirm("Are you sure you want to reset the game?");
+  if (resetconfirm) {
+    ResetGame();
+  }
+}
+function ResetGame(){
+  state = {
+    things: 0,
+    stuff: 0,
+    lives: 1,
+    thingsrate: 0.05,
+    stuffrate: 1,
+    thingscost: 3,
+    stuffcost: 3,
+    smarts: 0,
+    youknow: false,
+    dead: false,
+    know: false,
+    bark: 0,
+    sticks: 0,
+    vines: 0,
+    apples: 0,
+    goop: 0,
+    meat: 0,
+    fatderps: 0,
+    gatherers: 0,
+    choppers: 0,
+    axes: 0,
+    logs: 0,
+    houses: 0,
+    treechop: 0,
+    crush: 0,
+    axecraft: 0,
+    study: 0,
+    axebreak: 0,
+    crafters: 0,
+    underps: 0,
+    unrising: false,
+    pinned: false,
+    studiers: 0,
+    warderps: 0,
+    crushers: 0,
+    unkill: 0,
+    ungoop: 0,
+    statues: 0,
+    loyalty: 0,
+  };
 }
 function Feed(){
     state.things-=1;
