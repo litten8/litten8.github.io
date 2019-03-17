@@ -1,6 +1,57 @@
 function randint(min, max) {
     return Math.floor(Math.random()*(max-min+1))+min;
 }
+try {
+ state = JSON.parse(window.localStorage.getItem('state'));
+} catch(err) {
+ state = undefined;
+ window.localStorage.clear();
+}
+if (!state) {
+ state = {
+   things: 0,
+   stuff: 0,
+   lives: 1,
+   thingsrate: 0.05,
+   stuffrate: 1,
+   thingscost: 3,
+   stuffcost: 3,
+   smarts: 0,
+   youknow: false,
+   dead: false,
+   know: false,
+   bark: 0,
+   sticks: 0,
+   vines: 0,
+   apples: 0,
+   goop: 0,
+   meat: 0,
+   fatderps: 0,
+   gatherers: 0,
+   choppers: 0,
+   axes: 0,
+   logs: 0,
+   houses: 0,
+   treechop: 0,
+   crush: 0,
+   axecraft: 0,
+   study: 0,
+   axebreak: 0,
+   crafters: 0,
+   underps: 0,
+   unrising: false,
+   pinned: false,
+   studiers: 0,
+   warderps: 0,
+   crushers: 0,
+   unkill: 0,
+   ungoop: 0,
+   statues: 0,
+   loyalty: 0,
+ };
+}
+window.localStorage.setItem('state', JSON.stringify(state));
+
 var derpylion = document.getElementById("derpylion");
 var thingsn = document.getElementById("number");
 var stuffn = document.getElementById("number2");
@@ -79,45 +130,6 @@ var abandonbutton = document.getElementById("abandonbutton");
 var statuebutton = document.getElementById("statuebutton");
 var thingscostn = document.getElementById("thingscostn");
 var stuffcostn = document.getElementById("stuffcostn");
-var things=0;
-var stuff=0;
-var lives=1;
-var thingsrate=0.05;
-var stuffrate=1;
-var thingscost = 3;
-var stuffcost = 3;
-var smarts = 0;
-var youknow=false;
-var dead=false;
-var know=false;
-var bark=0;
-var sticks=0;
-var vines=0;
-var apples=0;
-var goop=0;
-var meat=0;
-var fatderps=0;
-var gatherers=0;
-var choppers=0;
-var axes=0;
-var logs=0;
-var houses=0;
-var treechop=0;
-var crush=0;
-var axecraft=0;
-var study=0;
-var axebreak=0;
-var crafters=0;
-var underps=0;
-var unrising=false;
-var pinned=false;
-var studiers=0;
-var warderps=0;
-var crushers=0;
-var unkill=0;
-var ungoop = 0;
-var statues=0;
-var loyalty=0;
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
 stuffratebutton.addEventListener("click", StuffUp);
@@ -148,300 +160,300 @@ goopaxebutton.addEventListener("click", GoopAxe);
 vineaxebutton.addEventListener("click", VineAxe);
 statuebutton.addEventListener("click", Statue);
 function update(){
-    thingsn.innerHTML=Math.floor(things);
-    stuffn.innerHTML=Math.floor(stuff);
-    smartsn.innerHTML=Math.floor(smarts);
-    thingscostn.innerHTML=thingscost;
-    stuffcostn.innerHTML=stuffcost;
-    livesn.innerHTML=lives;
-    sticksn.innerHTML=sticks;
-    barkn.innerHTML=bark;
-    vinesn.innerHTML=vines;
-    applesn.innerHTML=Math.floor(apples);
-    goopn.innerHTML=goop;
-    meatn.innerHTML=meat;
-    gatherern.innerHTML=gatherers;
-    chopn.innerHTML=choppers;
-    fatderpn.innerHTML=Math.floor(fatderps);
-    axen.innerHTML=axes;
-    logn.innerHTML=logs;
-    housen.innerHTML=houses;
-    craftn.innerHTML=crafters;
-    studyn.innerHTML=studiers;
-    warn.innerHTML=warderps;
-    crushn.innerHTML=crushers;
-    underpn.innerHTML=Math.floor(underps);
-    ungoopn.innerHTML=ungoop;
-    statuen.innerHTML=statues;
-    loyaltyn.innerHTML=loyalty;
-    if(smarts<0){
+    thingsn.innerHTML=Math.floor(state.things);
+    stuffn.innerHTML=Math.floor(state.stuff);
+    smartsn.innerHTML=Math.floor(state.smarts);
+    thingscostn.innerHTML=state.thingscost;
+    stuffcostn.innerHTML=state.stuffcost;
+    livesn.innerHTML=state.lives;
+    sticksn.innerHTML=state.sticks;
+    barkn.innerHTML=state.bark;
+    vinesn.innerHTML=state.vines;
+    applesn.innerHTML=Math.floor(state.apples);
+    goopn.innerHTML=state.goop;
+    meatn.innerHTML=state.meat;
+    gatherern.innerHTML=state.gatherers;
+    chopn.innerHTML=state.choppers;
+    fatderpn.innerHTML=Math.floor(state.fatderps);
+    axen.innerHTML=state.axes;
+    logn.innerHTML=state.logs;
+    housen.innerHTML=state.houses;
+    craftn.innerHTML=state.crafters;
+    studyn.innerHTML=state.studiers;
+    warn.innerHTML=state.warderps;
+    crushn.innerHTML=state.crushers;
+    underpn.innerHTML=Math.floor(state.underps);
+    ungoopn.innerHTML=state.ungoop;
+    statuen.innerHTML=state.statues;
+    loyaltyn.innerHTML=state.loyalty;
+    if(state.smarts<0){
         alert("The unthings have taken all of your smarts.")
         Die();
-        dead=false;
-        unrising=false;
-        underps=0;
-        smarts=0;
-        lives=1;
-        thingsrate=0.05;
-        stuffrate=1
+        state.dead=false;
+        state.unrising=false;
+        state.underps=0;
+        state.smarts=0;
+        state.lives=1;
+        state.thingsrate=0.05;
+        state.stuffrate=1
     }
-    if(smarts<17){
-        youknow=false;
+    if(state.smarts<17){
+        state.youknow=false;
     }
-    if(smarts<51){
-        know=false;
+    if(state.smarts<51){
+        state.know=false;
     }
-    if(!dead && !pinned){
+    if(!state.dead && !state.pinned){
         stuffbutton.style.visibility='visible';
     }else{
         stuffbutton.style.visibility='hidden';
     }
-    if(dead){
+    if(state.dead){
         derpylion.style.display='block';
     }else{
         derpylion.style.display='none';
     }
-    if(stuff>0 && things>0 && !know){
+    if(state.stuff>0 && state.things>0 && !state.know){
         ponderbutton.style.visibility='visible';
     }else{
         ponderbutton.style.visibility='hidden';
     }
-    if(smarts>0){
+    if(state.smarts>0){
         smarty.style.visibility='visible';
     }else{
         smarty.style.visibility='hidden';
     }
-    if(smarts>=17 && !youknow){
+    if(state.smarts>=17 && !state.youknow){
         youbutton.style.visibility='visible';
     }else{
         youbutton.style.visibility='hidden';
     }
-    if(youknow && stuff>=1 && !dead){
+    if(state.youknow && state.stuff>=1 && !state.dead){
         diebutton.style.visibility='visible';
     }else{
         diebutton.style.visibility='hidden';
     }
-    if(axes>=1 && !dead){
+    if(state.axes>=1 && !state.dead){
         axediebutton.style.visibility='visible';
     }else{
         axediebutton.style.visibility='hidden';
     }
-    if(dead){
+    if(state.dead){
         rebirthbutton.style.visibility='visible';
     }else{
         rebirthbutton.style.visibility='hidden';
     }
-    if(stuff>=thingscost){
+    if(state.stuff>=state.thingscost){
         thingsratebutton.style.visibility='visible';
     }else{
         thingsratebutton.style.visibility='hidden';
     }
-    if(things>=stuffcost){
+    if(state.things>=state.stuffcost){
         stuffratebutton.style.visibility='visible';
     }else{
         stuffratebutton.style.visibility='hidden';
     }
-    if(lives>1){
+    if(state.lives>1){
         livesdisplay.style.visibility='visible';
     }else{
         livesdisplay.style.visibility='hidden';
     }
-    if(stuff>=1 && smarts>=34 && !dead){
+    if(state.stuff>=1 && state.smarts>=34 && !state.dead){
         studystuffbutton.style.visibility='visible';
     }else{
         studystuffbutton.style.visibility='hidden';
     }
-    if(things>=1 && smarts>=34){
+    if(state.things>=1 && state.smarts>=34){
         studythingbutton.style.visibility='visible';
     }else{
         studythingbutton.style.visibility='hidden';
     }
-    if(dead && smarts>=51 && !know){
+    if(state.dead && state.smarts>=51 && !state.know){
         knowbutton.style.visibility='visible';
     }else{
         knowbutton.style.visibility='hidden';
     }
-    if(know && stuff>0 && !dead){
+    if(state.know && state.stuff>0 && !state.dead){
         throwbutton.style.visibility='visible';
     }else{
         throwbutton.style.visibility='hidden';
     }
-    if(bark>0){
+    if(state.bark>0){
         barkdisplay.style.visibility='visible';
     }else{
         barkdisplay.style.visibility='hidden';
     }
-    if(logs>0){
+    if(state.logs>0){
         logdisplay.style.visibility='visible';
     }else{
         logdisplay.style.visibility='hidden';
     }
-    if(houses>0){
+    if(state.houses>0){
         housedisplay.style.visibility='visible';
     }else{
         housedisplay.style.visibility='hidden';
     }
-    if(axes>0){
+    if(state.axes>0){
         axedisplay.style.visibility='visible';
     }else{
         axedisplay.style.visibility='hidden';
     }
-    if(fatderps>0){
+    if(state.fatderps>0){
         fatdisplay.style.visibility='visible';
     }else{
         fatdisplay.style.visibility='hidden';
     }
-    if(sticks>0){
+    if(state.sticks>0){
         sticksdisplay.style.visibility='visible';
     }else{
         sticksdisplay.style.visibility='hidden';
     }
-    if(vines>0){
+    if(state.vines>0){
         vinesdisplay.style.visibility='visible';
     }else{
         vinesdisplay.style.visibility='hidden';
     }
-    if(apples>0){
+    if(state.apples>0){
         applesdisplay.style.visibility='visible';
     }else{
         applesdisplay.style.visibility='hidden';
     }
-    if(gatherers>0){
+    if(state.gatherers>0){
         gatherdisplay.style.visibility='visible';
     }else{
         gatherdisplay.style.visibility='hidden';
     }
-    if(choppers>0){
+    if(state.choppers>0){
         chopdisplay.style.visibility='visible';
     }else{
         chopdisplay.style.visibility='hidden';
     }
-    if(crafters>0){
+    if(state.crafters>0){
         craftdisplay.style.visibility='visible';
     }else{
         craftdisplay.style.visibility='hidden';
     }
-    if(studiers>0){
+    if(state.studiers>0){
         studydisplay.style.visibility='visible';
     }else{
         studydisplay.style.visibility='hidden';
     }
-    if(warderps>0){
+    if(state.warderps>0){
         wardisplay.style.visibility='visible';
     }else{
         wardisplay.style.visibility='hidden';
     }
-    if(crushers>0){
+    if(state.crushers>0){
         crushdisplay.style.visibility='visible';
     }else{
         crushdisplay.style.visibility='hidden';
     }
-    if(goop>0){
+    if(state.goop>0){
         goopdisplay.style.visibility='visible';
     }else{
         goopdisplay.style.visibility='hidden';
     }
-    if(meat>0){
+    if(state.meat>0){
         meatdisplay.style.visibility='visible';
     }else{
         meatdisplay.style.visibility='hidden';
     }
-    if(loyalty>0){
+    if(state.loyalty>0){
         loyaltydisplay.style.visibility='visible';
     }else{
         loyaltydisplay.style.visibility='hidden';
     }
-    if(stuff>0 && things>0 && know){
+    if(state.stuff>0 && state.things>0 && state.know){
         crushbutton.style.visibility='visible';
     }else{
         crushbutton.style.visibility='hidden';
     }
-    if(meat>0 && things>0 && smarts>=85){
+    if(state.meat>0 && state.things>0 && state.smarts>=85){
         trainbutton.style.visibility='visible';
     }else{
         trainbutton.style.visibility='hidden';
     }
-    if(logs>=50 && stuff>=1 && vines>=10 && smarts>=527){
+    if(state.logs>=50 && state.stuff>=1 && state.vines>=10 && state.smarts>=527){
         crusherbutton.style.visibility='visible';
     }else{
         crusherbutton.style.visibility='hidden';
     }
-    if(meat>=10 && things>0 && smarts>=204 && axes>0){
+    if(state.meat>=10 && state.things>0 && state.smarts>=204 && state.axes>0){
         choptrainbutton.style.visibility='visible';
     }else{
         choptrainbutton.style.visibility='hidden';
     }
-    if(meat>=20 && things>0 && smarts>=255 && houses>0){
+    if(state.meat>=20 && state.things>0 && state.smarts>=255 && state.houses>0){
         crafttrainbutton.style.visibility='visible';
     }else{
         crafttrainbutton.style.visibility='hidden';
     }
-    if(meat>=40 && smarts>=323){
+    if(state.meat>=40 && state.smarts>=323){
         studytrainbutton.style.visibility='visible';
     }else{
         studytrainbutton.style.visibility='hidden';
     }
-    if(meat>=10 && smarts>=408 && unrising){
+    if(state.meat>=10 && state.smarts>=408 && state.unrising){
         wartrainbutton.style.visibility='visible';
     }else{
         wartrainbutton.style.visibility='hidden';
     }
-    if(stuff>0 && fatderps>0){
+    if(state.stuff>0 && state.fatderps>0){
         fatcrushbutton.style.visibility='visible';
     }else{
         fatcrushbutton.style.visibility='hidden';
     }
-    if(axes>0 && !dead && !pinned){
+    if(state.axes>0 && !state.dead && !state.pinned){
         chopbutton.style.visibility='visible';
     }else{
         chopbutton.style.visibility='hidden';
     }
-    if(apples>0 && things>0 && know){
+    if(state.apples>0 && state.things>0 && state.know){
         feedbutton.style.visibility='visible';
     }else{
         feedbutton.style.visibility='hidden';
     }
-    if(goop>0 && sticks>0 && stuff>0 && smarts>=119){
+    if(state.goop>0 && state.sticks>0 && state.stuff>0 && state.smarts>=119){
         goopaxebutton.style.visibility='visible';
     }else{
         goopaxebutton.style.visibility='hidden';
     }
-    if(goop>=50 && logs>=500 && bark>2500 && smarts>=170){
+    if(state.goop>=50 && state.logs>=500 && state.bark>2500 && state.smarts>=170){
         housebutton.style.visibility='visible';
     }else{
         housebutton.style.visibility='hidden';
     }
-    if(vines>0 && sticks>0 && stuff>0 && smarts>=119){
+    if(state.vines>0 && state.sticks>0 && state.stuff>0 && state.smarts>=119){
         vineaxebutton.style.visibility='visible';
     }else{
         vineaxebutton.style.visibility='hidden';
     }
-    if(ungoop>=100 && smarts>=187){
+    if(state.ungoop>=100 && state.smarts>=187){
         statuebutton.style.visibility='visible';
     }else{
         statuebutton.style.visibility='hidden';
     }
-    if(pinned){
+    if(state.pinned){
         unpinbutton.style.visibility='visible';
     }else{
         unpinbutton.style.visibility='hidden';
     }
-    if(axes>=1 && underps>=1 && unrising && !pinned){
+    if(state.axes>=1 && state.underps>=1 && state.unrising && !state.pinned){
         battlebutton.style.visibility='visible';
     }else{
         battlebutton.style.visibility='hidden';
     }
-    if(ungoop>0){
+    if(state.ungoop>0){
         ungoopdisplay.style.visibility='visible';
     }else{
         ungoopdisplay.style.visibility='hidden';
     }
-    if(statues>0){
+    if(state.statues>0){
         statuedisplay.style.visibility='visible';
     }else{
         statuedisplay.style.visibility='hidden';
     }
-    if(know){
+    if(state.know){
         document.querySelectorAll('.things').forEach(function(e) {
             e.innerHTML="derps";
         });
@@ -458,377 +470,378 @@ function update(){
         });
         thingcreation.innerHTML="thing creation"
     }
-    if(unrising && !dead){
+    if(state.unrising && !state.dead){
         underpdisplay.style.visibility='visible';
     }else{
         underpdisplay.style.visibility='hidden';
     }
-    if(unrising && !dead && know){
+    if(state.unrising && !state.dead && state.know){
         abandonbutton.style.visibility='visible';
     }else{
         abandonbutton.style.visibility='hidden';
     }
 }
 function Crush(){
-    things-=1
-    stuff-=1
-    goop+=1
+    state.things-=1
+    state.stuff-=1
+    state.goop+=1
 }
 function FatCrush(){
-    fatderps-=1
-    stuff-=1
+    state.fatderps-=1
+    state.stuff-=1
     if(Math.random()<0.5){
-        goop+=2;
+        state.goop+=2;
     }else{
-        meat+=1;
+        state.meat+=1;
     }
 }
 function Feed(){
-    things-=1;
-    apples-=1;
-    fatderps+=1;
+    state.things-=1;
+    state.apples-=1;
+    state.fatderps+=1;
 }
 function Chop(){
-    axebreak+=1
-    logs+=randint(1,5);
-    bark+=randint(5,20);
-    sticks+=randint(3,15);
-    vines+=randint(0,5);
-    apples+=randint(0,2);
-    if(axebreak==10){
-        axes-=1;
-        axebreak=0;
+    state.axebreak+=1
+    state.logs+=randint(1,5);
+    state.bark+=randint(5,20);
+    state.sticks+=randint(3,15);
+    state.vines+=randint(0,5);
+    state.apples+=randint(0,2);
+    if(state.axebreak==10){
+        state.axes-=1;
+        state.axebreak=0;
     }
 }
 function Train(){
-    things-=1;
-    meat-=1;
-    gatherers+=1;
+    state.things-=1;
+    state.meat-=1;
+    state.gatherers+=1;
 }
 function ChopTrain(){
-    things-=1;
-    meat-=10;
-    choppers+=1;
+    state.things-=1;
+    state.meat-=10;
+    state.choppers+=1;
 }
 function CraftTrain(){
-    things-=1;
-    houses-=1;
-    meat-=20;
-    crafters+=1;
+    state.things-=1;
+    state.houses-=1;
+    state.meat-=20;
+    state.crafters+=1;
 }
 function StudyTrain(){
-    things-=1;
-    smarts-=10;
-    meat-=40;
-    studiers+=1;
+    state.things-=1;
+    state.smarts-=10;
+    state.meat-=40;
+    state.studiers+=1;
 }
 function WarTrain(){
-    things-=1;
-    meat-=10;
-    warderps+=1;
+    state.things-=1;
+    state.meat-=10;
+    state.warderps+=1;
 }
 function House(){
-    bark-=2500;
-    goop-=50;
-    logs-=500;
-    houses+=1;
+    state.bark-=2500;
+    state.goop-=50;
+    state.logs-=500;
+    state.houses+=1;
 }
 function Crusher(){
-    vines-=10;
-    logs-=50;
-    crushers+=1;
+    state.vines-=10;
+    state.logs-=50;
+    state.crushers+=1;
 }
 function Unpin(){
-    axes-=1;
-    pinned=false;
+    state.axes-=1;
+    state.pinned=false;
 }
 function Abandon(){
-    things-=1;
-    underps+=1;
+    state.things-=1;
+    state.underps+=1;
 }
 function KillUnderp(){
-    if(houses>0){
-        var dcmod=houses;
+    if(state.houses>0){
+        var dcmod=state.houses;
     }else{
         var dcmod=1;
     }
     if(Math.random()<0.005/dcmod){
-        goop+=2;
-        meat+=1;
-        warderps-=1;
-        axebreak+=1;
-        if(axebreak==10){
-            axes-=1;
-            axebreak=0;
+        state.goop+=2;
+        state.meat+=1;
+        state.warderps-=1;
+        state.axebreak+=1;
+        if(state.axebreak==10){
+            state.axes-=1;
+            state.axebreak=0;
         }
     }else if(Math.random()<1-(0.95/dcmod)){
-        underps-=1
-        meat+=1;
-        ungoop+=2;
+        state.underps-=1
+        state.meat+=1;
+        state.ungoop+=2;
         if(Math.random()<0.1){
-            axes+=1;
+            state.axes+=1;
         }
-        axebreak+=1;
-        if(axebreak==10){
-            axes-=1;
-            axebreak=0;
+        state.axebreak+=1;
+        if(state.axebreak==10){
+            state.axes-=1;
+            state.axebreak=0;
         }
     }
 }
 function Battle(){
     if(Math.random()<0.001){
-        pinned=true;
-        axebreak+=1;
-        if(axebreak==10){
-            axes-=1;
-            axebreak=0;
+        state.pinned=true;
+        state.axebreak+=1;
+        if(state.axebreak==10){
+            state.axes-=1;
+            state.axebreak=0;
         }
     }else if(Math.random()<0.99){
-        underps-=1
-        meat+=1;
-        ungoop+=2;
+        state.underps-=1
+        state.meat+=1;
+        state.ungoop+=2;
         if(Math.random()<0.1){
-            axes+=1;
+            state.axes+=1;
         }
-        axebreak+=1;
-        if(axebreak==10){
-            axes-=1;
-            axebreak=0;
+        state.axebreak+=1;
+        if(state.axebreak==10){
+            state.axes-=1;
+            state.axebreak=0;
         }
     }
 }
 function GoopAxe(){
-    stuff-=1;
-    goop-=1;
-    sticks-=1;
-    axes+=1;
+    state.stuff-=1;
+    state.goop-=1;
+    state.sticks-=1;
+    state.axes+=1;
 }
 function VineAxe(){
-    stuff-=1;
-    vines-=1;
-    sticks-=1;
-    axes+=1;
+    state.stuff-=1;
+    state.vines-=1;
+    state.sticks-=1;
+    state.axes+=1;
 }
 function RockDie(){
     Die();
-    stuff=1;
+    state.stuff=1;
 }
 function AxeDie(){
     Die();
-    axes=1;
+    state.axes=1;
 }
 function Die(){
-    pinned=false;
-    stuff=0;
-    smarts-=10
-    things=0;
-    bark=0;
-    sticks=0;
-    vines=0;
-    apples=0;
-    goop=0;
-    meat=0;
-    fatderps=0;
-    axes=0;
-    logs=0;
-    thingscost = 3;
-    stuffcost = 3;
+    state.pinned=false;
+    state.stuff=0;
+    state.smarts-=10
+    state.things=0;
+    state.bark=0;
+    state.sticks=0;
+    state.vines=0;
+    state.apples=0;
+    state.goop=0;
+    state.meat=0;
+    state.fatderps=0;
+    state.axes=0;
+    state.logs=0;
+    state.thingscost = 3;
+    state.stuffcost = 3;
     var nunderps = 0
-    nunderps+=gatherers;
-    gatherers=0;
-    nunderps+=choppers;
-    choppers=0;
-    nunderps+=crafters;
-    crafters=0;
-    nunderps+=studiers;
-    studiers=0;
-    nunderps+=warderps;
-    if (nunderps >= loyalty) {
-      things += nunderps;
-      nunderps -= loyalty;
-      loyalty = 0;
-      underps += nunderps;
+    nunderps+=state.gatherers;
+    state.gatherers=0;
+    nunderps+=state.choppers;
+    state.choppers=0;
+    nunderps+=state.crafters;
+    state.crafters=0;
+    nunderps+=state.studiers;
+    state.studiers=0;
+    nunderps+=state.warderps;
+    if (nunderps >= state.loyalty) {
+      state.things += nunderps;
+      nunderps -= state.loyalty;
+      state.loyalty = 0;
+      state.underps += nunderps;
     } else {
-      things = nunderps
-      loyalty -= nunderps
+      state.things = nunderps
+      state.loyalty -= nunderps
       nunderps = 0
     }
-    warderps=0;
-    houses=0;
-    crushers=0;
-    ungoop=0;
-    statues-=10;
-    dead=true;
+    state.warderps=0;
+    state.houses=0;
+    state.crushers=0;
+    state.ungoop=0;
+    state.statues-=10;
+    state.dead=true;
 }
 function Rebirth(){
-    dead=false;
-    lives+=1
-    if(underps>=16 || unrising){
-        underps = 16
-        unrising=true;
+    state.dead=false;
+    state.lives+=1
+    if(state.underps>=16 || state.unrising){
+        state.underps = 16
+        state.unrising=true;
         alert("A strange looking derp holding an axe to your neck says that it was one of the derps you have abandoned by dying. It says that all the derps you have abandoned have made an empire, and are calling themselves underps. They are starting an uprising, or actually, an unrising. Then the underps pin you down and start to gather away your smarts.")
-        pinned=true;
+        state.pinned=true;
         alert("A derp offers to help you, it appears to have learned from the underps but it is still loyal to you. It starts to gather rocks for you, one of its friends starts to chop trees for you using an axe it stole from the underps, another few begin to study some rocks, and a couple more begin to defend you from the underps with axes.")
-        gatherers+=1;
-        choppers+=1;
-        studiers+=3;
-        warderps+=2;
-        axes+=warderps+1;
+        state.gatherers+=1;
+        state.choppers+=1;
+        state.studiers+=3;
+        state.warderps+=2;
+        state.axes+=state.warderps+1;
     }
-    for (var i = 0; i<loyalty; i++) {
+    for (var i = 0; i<state.loyalty; i++) {
       if (Math.random()<0.01) {
-        gatherers+=1;
+        state.gatherers+=1;
       }if (Math.random()<0.01) {
-        choppers+=1;
-        axes+=1;
+        state.choppers+=1;
+        state.axes+=1;
       }if (Math.random()<0.01) {
-        choppers+=1;
-        warderps+=1;
-        axes+=1;
+        state.choppers+=1;
+        state.warderps+=1;
+        state.axes+=1;
       }if (Math.random()<0.01) {
-        studiers+=1;
+        state.studiers+=1;
       }
     }
 }
 function Throw(){
-    stuff-=1;
+    state.stuff-=1;
     if(Math.random()<0.5){
-        bark+=1;
+        state.bark+=1;
     }else if(Math.random()<0.5){
-        sticks+=1;
+        state.sticks+=1;
     }else if(Math.random()<0.8){
-        vines+=1;
+        state.vines+=1;
     }else{
-        apples+=1;
+        state.apples+=1;
     }
 }
 function Learn(){
-    smarts+=20;
+    state.smarts+=20;
     alert("The derpy lion explains to you everything about the world. They explain that the stuff you are holding is called a rock, and that what you called things are actually animals called derps. They also explain how the pillars around you are called trees. They explain to you many more things that will probably come in handy soon.")
-    know=true;
+    state.know=true;
 }
 function Stuff(){
-    stuff+=stuffrate;
+    state.stuff+=state.stuffrate;
 }
 function StudyThing(){
-    things-=1;
-    smarts+=Math.floor(Math.random()*3*lives)+1
+    state.things-=1;
+    state.smarts+=Math.floor(Math.random()*3*state.lives)+1
 }
 function StudyStuff(){
-    stuff-=1;
-    smarts+=Math.floor(Math.random()*6*lives)
+    state.stuff-=1;
+    state.smarts+=Math.floor(Math.random()*6*state.lives)
 }
 function Smarts(){
-    stuff-=1;
-    things-=1;
-    smarts+=1;
+    state.stuff-=1;
+    state.things-=1;
+    state.smarts+=1;
 }
 function You(){
-    youknow=true;
-    smarts+=5
+    state.youknow=true;
+    state.smarts+=5
 }
 function ThingsUp(){
-    stuff-=thingscost;
-    thingsrate+=0.05;
-    thingscost*=2;
+    state.stuff-=state.thingscost;
+    state.thingsrate+=0.05;
+    state.thingscost*=2;
 }
 function StuffUp(){
-    things-=stuffcost;
-    stuffrate+=1;
-    stuffcost*=2;
+    state.things-=state.stuffcost;
+    state.stuffrate+=1;
+    state.stuffcost*=2;
 }
 function Statue(){
-  ungoop -= 100
-  statues += 1
-  loyalty += 1
+  state.ungoop -= 100
+  state.statues += 1
+  state.loyalty += 1
 }
 function always(){
-    if(!dead){
-        things+=thingsrate;
-        if(gatherers>0){
-            stuff+=(gatherers*(stuffrate/40))*(2**houses);
+    if(!state.dead){
+        state.things+=state.thingsrate;
+        if(state.gatherers>0){
+            state.stuff+=(state.gatherers*(state.stuffrate/40))*(2**state.houses);
         }
-        if(choppers>0 && axes>0){
-            treechop+=(choppers/40)*(2**houses);
-            if(treechop>=1){
-                var chops = Math.floor(treechop);
+        if(state.choppers>0 && state.axes>0){
+            state.treechop+=(state.choppers/40)*(2**state.houses);
+            if(state.treechop>=1){
+                var chops = Math.floor(state.treechop);
                 for(var i = 0; i<=chops; i++){
-                    treechop-=1;
-                    if(axes>0){
+                    state.treechop-=1;
+                    if(state.axes>0){
                         Chop();
                     }
                 }
             }
         }
-        if(crafters>0 && vines>0 && sticks>0 && stuff>0){
-            axecraft+=(crafters/40)*(2**crafters);
-            if(axecraft>=1){
-                var crafts = Math.floor(axecraft);
+        if(state.crafters>0 && state.vines>0 && state.sticks>0 && state.stuff>0){
+            state.axecraft+=(state.crafters/40)*(2**state.crafters);
+            if(state.axecraft>=1){
+                var crafts = Math.floor(state.axecraft);
                 for(var i = 0; i<=crafts; i++){
-                    axecraft-=1;
-                    if(vines>0 && sticks>0 && stuff>0){
+                    state.axecraft-=1;
+                    if(state.vines>0 && state.sticks>0 && state.stuff>0){
                         VineAxe();
                     }
                 }
             }
         }
-        if(houses>0 && things>houses/40 && apples>houses/40){
-            things-=houses/40;
-            apples-=houses/40;
-            fatderps+=houses/40;
+        if(state.houses>0 && state.things>state.houses/40 && state.apples>state.houses/40){
+            state.things-=state.houses/40;
+            state.apples-=state.houses/40;
+            state.fatderps+=state.houses/40;
         }
-        if(unrising && underps>9 && pinned){
-            smarts-=underps/800;
+        if(state.unrising && state.underps>9 && state.pinned){
+            state.smarts-=state.underps/800;
         }
-        if(unrising && underps>8 && !pinned && Math.random()>0.999) {
-          pinned = true;
+        if(state.unrising && state.underps>8 && !state.pinned && Math.random()>0.999) {
+          state.pinned = true;
         }
-        if(studiers>0 && stuff>=1){
-            study+=(studiers/40)*(2**houses);
-            if(study>=1){
-                var studies = Math.floor(study);
+        if(state.studiers>0 && state.stuff>=1){
+            state.study+=(state.studiers/40)*(2**state.houses);
+            if(state.study>=1){
+                var studies = Math.floor(state.study);
                 for(var i = 0; i<=studies; i++){
-                    study-=1;
-                    if(stuff>=1){
+                    state.study-=1;
+                    if(state.stuff>=1){
                         StudyStuff();
                     }
                 }
             }
         }
-        if(warderps>0 && axes>=1 && underps>=1 && unrising){
-            unkill+=(warderps/40)*(2**houses);
-            if(unkill>=1){
-                var kills = Math.floor(unkill);
+        if(state.warderps>0 && state.axes>=1 && state.underps>=1 && state.unrising){
+            state.unkill+=(state.warderps/40)*(2**state.houses);
+            if(state.unkill>=1){
+                var kills = Math.floor(state.unkill);
                 for(var i = 0; i<=kills; i++){
-                    unkill-=1;
-                    if(underps>=1 && axes>=1){
+                    state.unkill-=1;
+                    if(state.underps>=1 && state.axes>=1){
                         KillUnderp();
                     }
                 }
             }
         }
-        if(crushers>0 && stuff>=1 && fatderps>=1){
-            crush+=(crushers/800);
-            if(crush>=1){
-                var crushes = Math.floor(crush);
+        if(state.crushers>0 && state.stuff>=1 && state.fatderps>=1){
+            state.crush+=(state.crushers/800);
+            if(state.crush>=1){
+                var crushes = Math.floor(state.crush);
                 for(var i = 0; i<=crushes; i++){
-                    crush-=1;
-                    if(fatderps>=1 && stuff>=1){
+                    state.crush-=1;
+                    if(state.fatderps>=1 && state.stuff>=1){
                         FatCrush();
                     }else{
-                        stuff-=1
+                        state.stuff-=1
                     }
                 }
             }
         }
-        if(statues>0) {
-          loyalty += statues/100
+        if(state.statues>0) {
+          state.loyalty += state.statues/100
         }
     }
-    if(underps>0){
-        underps*=1.0005;
+    if(state.underps>0){
+        state.underps*=1.0005;
     }
     update();
+    window.localStorage.setItem('state', JSON.stringify(state));
     requestAnimationFrame(always);
 }
 always();
