@@ -185,7 +185,7 @@ function update(){
     underpn.innerHTML=Math.floor(state.underps);
     ungoopn.innerHTML=state.ungoop;
     statuen.innerHTML=state.statues;
-    loyaltyn.innerHTML=state.loyalty;
+    loyaltyn.innerHTML=Math.floor(state.loyalty);
     if(state.smarts<0){
         alert("The unthings have taken all of your smarts.")
         Die();
