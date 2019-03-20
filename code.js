@@ -862,7 +862,7 @@ function always(){
           state.loyalty += state.statues/100
         }
     }
-    if(state.underps>0){
+    if(state.underps>=1){
         state.underps+=0.01;
     }
     update();
