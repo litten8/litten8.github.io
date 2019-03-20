@@ -775,6 +775,10 @@ function Statue(){
 function WorkDerps() {
   return state.crafters + state.gatherers + state.choppers + state.warderps + state.studiers
 }
+function Inspire(){
+  state.loyalty += 0.01
+  state.smarts -= 1
+}
 function always(){
     if(!state.dead){
         state.things+=state.thingsrate;
