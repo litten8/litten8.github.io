@@ -90,6 +90,7 @@ var abandonbutton = document.getElementById("abandonbutton");
 var statuebutton = document.getElementById("statuebutton");
 var thingscostn = document.getElementById("thingscostn");
 var resetbutton = document.getElementById("resetbutton");
+var inspirebutton = document.getElementById("inspirebutton");
 var stuffcostn = document.getElementById("stuffcostn");
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
@@ -121,6 +122,7 @@ goopaxebutton.addEventListener("click", GoopAxe);
 vineaxebutton.addEventListener("click", VineAxe);
 statuebutton.addEventListener("click", Statue);
 resetbutton.addEventListener("click", Reset);
+inspirebutton.addEventListener("click", Inspire);
 function update(){
     thingsn.innerHTML=Math.floor(state.things);
     stuffn.innerHTML=Math.floor(state.stuff);
@@ -169,6 +171,11 @@ function update(){
         stuffbutton.style.visibility='visible';
     }else{
         stuffbutton.style.visibility='hidden';
+    }
+    if((state.statues>1 || WorkDerps()>20) && smarts > 850){
+        inspirebutton.style.visibility='visible';
+    }else{
+        inspirebutton.style.visibility='hidden';
     }
     if(state.dead){
         derpylion.style.display='block';
@@ -458,7 +465,7 @@ function FatCrush(){
     }
 }
 function Reset(){
-  var resetconfirm = confirm("Are you sure you want to reset the game?");
+  var resetconfirm = confirm("Are you sure you want to reset the game? This is not a prestige mechanic.");
   if (resetconfirm) {
     ResetGame();
   }
@@ -764,6 +771,10 @@ function Statue(){
   state.ungoop -= 100
   state.statues += 1
   state.loyalty += 1
+}
+function Inspire(){
+  state.loyalty += 0.01
+  state.smarts -= 1
 }
 function always(){
     if(!state.dead){
