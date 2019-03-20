@@ -863,7 +863,7 @@ function always(){
         }
     }
     if(state.underps>0){
-        state.underps*=1.0005;
+        state.underps+=0.01;
     }
     update();
     window.localStorage.setItem('state', JSON.stringify(state));
