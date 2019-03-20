@@ -172,7 +172,7 @@ function update(){
     }else{
         stuffbutton.style.visibility='hidden';
     }
-    if((state.statues>1 || WorkDerps()>20) && smarts > 850){
+    if((state.statues>1 || WorkDerps()>20) && state.smarts > 850){
         inspirebutton.style.visibility='visible';
     }else{
         inspirebutton.style.visibility='hidden';
