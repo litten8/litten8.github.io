@@ -343,7 +343,7 @@ function update(){
     }else{
         crushbutton.style.visibility='hidden';
     }
-    if(state.meat>0 && state.things>0 && state.smarts>=85){
+    if(state.meat>0 && state.things>0 && state.smarts>=85 && !state.dead){
         trainbutton.style.visibility='visible';
     }else{
         trainbutton.style.visibility='hidden';
@@ -353,7 +353,7 @@ function update(){
     }else{
         crusherbutton.style.visibility='hidden';
     }
-    if(state.meat>=10 && state.things>0 && state.smarts>=204 && state.axes>0){
+    if(state.meat>=10 && state.things>0 && state.smarts>=204 && state.axes>0 && !state.dead){
         choptrainbutton.style.visibility='visible';
     }else{
         choptrainbutton.style.visibility='hidden';
@@ -368,7 +368,7 @@ function update(){
     }else{
         studytrainbutton.style.visibility='hidden';
     }
-    if(state.meat>=10 && state.smarts>=408 && state.unrising){
+    if(state.meat>=10 && state.smarts>=408 && state.unrising && !state.dead){
         wartrainbutton.style.visibility='visible';
     }else{
         wartrainbutton.style.visibility='hidden';
@@ -413,7 +413,7 @@ function update(){
     }else{
         unpinbutton.style.visibility='hidden';
     }
-    if(state.axes>=1 && state.underps>=1 && state.unrising && !state.pinned){
+    if(state.axes>=1 && state.underps>=1 && state.unrising && !state.pinned && !state.dead){
         battlebutton.style.visibility='visible';
     }else{
         battlebutton.style.visibility='hidden';
