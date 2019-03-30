@@ -693,11 +693,9 @@ function Die(){
     if (nunderps >= state.loyalty) {
       state.things += nunderps;
       nunderps -= state.loyalty;
-      state.loyalty = 0;
       state.underps += nunderps;
     } else {
       state.things = nunderps
-      state.loyalty -= nunderps
       nunderps = 0
     }
     state.warderps=0;
