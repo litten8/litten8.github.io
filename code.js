@@ -13,6 +13,8 @@ if (!state) {
 window.localStorage.setItem('state', JSON.stringify(state));
 
 var derpylion = document.getElementById("derpylion");
+var creepy = document.getElementById("creepy");
+var creepylion = document.getElementById("creepylion");
 var thingsn = document.getElementById("number");
 var stuffn = document.getElementById("number2");
 var barkn = document.getElementById("barkn");
@@ -90,6 +92,8 @@ var abandonbutton = document.getElementById("abandonbutton");
 var statuebutton = document.getElementById("statuebutton");
 var thingscostn = document.getElementById("thingscostn");
 var resetbutton = document.getElementById("resetbutton");
+var godbutton = document.getElementById("godbutton");
+var jesusbutton = document.getElementById("jesusbutton");
 var stuffcostn = document.getElementById("stuffcostn");
 stuffbutton.addEventListener("click", Stuff);
 thingsratebutton.addEventListener("click", ThingsUp);
@@ -121,6 +125,8 @@ goopaxebutton.addEventListener("click", GoopAxe);
 vineaxebutton.addEventListener("click", VineAxe);
 statuebutton.addEventListener("click", Statue);
 resetbutton.addEventListener("click", Reset);
+godbutton.addEventListener("click", God);
+jesusbutton.addEventListener("click", Jesus);
 function update(){
     thingsn.innerHTML=Math.floor(state.things);
     stuffn.innerHTML=Math.floor(state.stuff);
@@ -175,6 +181,13 @@ function update(){
     }else{
         derpylion.style.display='none';
     }
+    if(state.god){
+        creepylion.style.display='block';
+        creepy.style.display='none';
+    }else{
+        creepylion.style.display='none';
+        creepy.style.display='block';
+    }
     if(state.stuff>0 && state.things>0 && !state.know){
         ponderbutton.style.visibility='visible';
     }else{
@@ -190,12 +203,12 @@ function update(){
     }else{
         youbutton.style.visibility='hidden';
     }
-    if(state.youknow && state.stuff>=1 && !state.dead){
+    if(state.youknow && state.stuff>=1 && !state.dead && !state.god){
         diebutton.style.visibility='visible';
     }else{
         diebutton.style.visibility='hidden';
     }
-    if(state.axes>=1 && !state.dead){
+    if(state.axes>=1 && !state.dead && !state.god){
         axediebutton.style.visibility='visible';
     }else{
         axediebutton.style.visibility='hidden';
@@ -415,6 +428,16 @@ function update(){
     }else{
         statuedisplay.style.visibility='hidden';
     }
+    if(state.loyalty>=100 && state.smarts>=340) {
+        godbutton.style.visibility='visible';
+    }else{
+        godbutton.style.visibility='hidden';
+    }
+    if(state.loyalty>=10 && state.god) {
+        jesusbutton.style.visibility='visible';
+    }else{
+        jesusbutton.style.visibility='hidden';
+    }
     if(state.know){
         document.querySelectorAll('.things').forEach(function(e) {
             e.innerHTML="derps";
@@ -504,6 +527,7 @@ function ResetGame(){
     ungoop: 0,
     statues: 0,
     loyalty: 0,
+    god: false,
   };
 }
 function Feed(){
@@ -767,6 +791,14 @@ function Statue(){
 }
 function WorkDerps() {
   return state.crafters + state.gatherers + state.choppers + state.warderps + state.studiers
+}
+function God() {
+  alert("As you jokingly say that you're the god of the derps, your body(which is currently just a head) begins to change. At first you wonder if this is puberty, but then you realize that you have become a derpy lion! This must mean that that derpy lion in the afterlife is a god, but you have no way of talking to him now that you are immortal.")
+  state.god=true;
+}
+function Jesus(){
+  state.loyalty -= 10;
+  state.lives += 1;
 }
 function always(){
     if(!state.dead){
