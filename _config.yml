@@ -1,0 +1,7 @@
+title: A Girl Who is Clever
+url: "https://agwic.me"
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
