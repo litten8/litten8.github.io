@@ -15,7 +15,7 @@ Along with this, Celeste has amazing controls. In many platformers, getting the 
 
 As well as the shorter levels discussed earlier, every once in a while there are far longer levels that are for more ordinary for a platformer, but still on the short side. While it may seem that these levels may defeat the purpose of the game, they actually make it far better. These levels are all near the end of the game, and are basically building on all previous levels. They seamlessly put what could have been several levels all together, creating a far more pleasing level design. However, these levels are far from pleasing. You will die hundreds of times before beating one, but when you do, it will feel wonderful. You will watch yourself weaving through a beast of a level, and wonder how you did it, and it will be amazing.
 
-#Terraria
+# Terraria
 
 Terraria is often seen as 2D Minecraft. However, Terraria is far more than that in several ways. Terraria is, at its core, an adventure game. While you can build things in Terraria, it's just a feature to go alongside its main feature of battling monsters, unlike Minecraft, where battling monsters is the side feature. This makes the two games incredibly different, and not able to be compared, so I will not be comparing them for the remainder of this review.
 
