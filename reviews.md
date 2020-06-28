@@ -25,7 +25,7 @@ After you have gathered better equipment from spelunking, you'll probably be rea
 
 As each boss is harder than the one before it, and there are 31 of them, the amount that you get stronger from the beginning of the game to the end is immense. At the beginning of the game, you have nothing but some copper tools, but by the end of the game you're nearly invincible, can fly wherever you want, and can destroy nearly any enemy with ease. This sense of slowly growing power is what makes Terraria such a fun game.
 
-#Hollow Knight
+# Hollow Knight
 
 Hollow Knight is a Metroidvania. Metroidvanias are a genre of game based on Metroid and Castlevania, neither of which I have played, so I don't now how much the current definition applies. However, modern Metroidvanias are platformers where rather than just have a set of levels, one after the other, you explore a large open world. Generally in this open world, certain areas are locked behind certain abilities, which force you onto a relatively linear path, but even then there are ofter bugs or secrets that allow you to skip around. Now, this description of a Metroidvania is also a perfect description of Hollow Knight, as it is simply a really good Metroidvania. Not a work of art, not even particularly unique, just really really good. Now, there is more to it than that, however rather than being uniqueness, it's just the ways it perfects the Metroidvania formula.
 
@@ -35,7 +35,7 @@ Along with secrets, Hollow Knight also improves on major unlocking of areas. In 
 
 These two improvements would make Hollow Knight an amazing game by themself, but there's one more thing about Hollow Knight. It's really long. Like, I've played over 100 hours and haven't even beaten a couple bosses and events, though I have unlocked the whole map. So all of these amazing things won't just last a short time before you're done, you'll have tons of time to enjoy all the amazing parts of Hollow Knight.
 
-#Europa Universalis 4
+# Europa Universalis 4
 
 Europa Universalis 4, or as it's more commonly called, EU4, is what is known as a Grand Strategy Game. Grand Strategy games are games that focus on overall strategy, but rather than just controlling an army or something small scale, you control an entire country. In EU4 specifically, you control a country on the verge of the Age of Discovery, one of the most exciting times in human history.
 
