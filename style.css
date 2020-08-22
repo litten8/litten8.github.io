@@ -1,15 +1,15 @@
 a:visited {
-  color: #99AAFF;
+  color: #0076BE;
 }
 
 a {
-  color: #99AAFF;
+  color: #0076BE;
 }
 
 body {
   font-family: sans-serif;
-  background-color: #118833;
-  color: #AACCFF;
+  background-color: #4DB4D7;
+  color: #0076BE;
   padding: 0;
   margin: 0;
 }
@@ -31,7 +31,24 @@ body {
 
 #page {
   max-width: 960px;
-  border: 2px solid #AACCFF;
   margin-left: auto;
   margin-right: auto;
+}
+
+#header {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #48BF91;
+  border: 1px solid #0076BE;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#content {
+  background-color: #8BD9C7;
+  padding: 1rem;
+}
+
+#index {
+  text-align: center;
 }

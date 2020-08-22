@@ -3,20 +3,24 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }} - {{ site.title }}</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
 <body>
   <div id="page">
-    <div>
+    <div id="header">
       <a href="/">Home</a>
       |
       <a href="/about.html">About Me</a>
       |
       <a href="/derp">Derpy Lions: The Game</a>
       |
-      <a href="/reviews.html">Video Game Reviews</a>
+      <a href="/agiig.html">Agiig</a>
+      |
+      <a href="/agrat.html">Agrat</a>
     </div>
-    {{ content }}
+    <div id="content">
+      {{ content }}
+    </div>
   </div>
 </body>
 </html>
