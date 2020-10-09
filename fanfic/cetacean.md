@@ -1,6 +1,6 @@
 # Cetacean
 
-Most of the chapters in Cetacean were written very quickly when inspiration struck, and posted without beta readers. This resulted in the mess you will see. The author's notes are included, as they are somewhat part of that mess. You can read it in the form I originally posted it on Spacebattles [here](https://forums.spacebattles.com/threads/cetacean-worm-au-and-maybe-si.780286/#post-60510397) and on Sufficient Velocity [here](https://forums.sufficientvelocity.com/threads/cetacean-worm-au-and-maybe-si.57376/#post-12974303).
+Most of the chapters in Cetacean were written very quickly when inspiration struck, and posted without beta readers. This resulted in the mess you will see. The author's notes are included, as they are somewhat part of that mess. You can read it in the form I originally posted it on Spacebattles [here](https://forums.spacebattles.com/threads/cetacean-worm-au-and-maybe-si.780286/# post-60510397) and on Sufficient Velocity [here](https://forums.sufficientvelocity.com/threads/cetacean-worm-au-and-maybe-si.57376/# post-12974303).
 
 # Chapter 1
 
@@ -215,7 +215,7 @@ BlahBlahBlahBlahBlahBlahBlah
 
 I'm a hero now! My first patrol is tomorrow! Once that happens, I'll be like, officially a hero! Stopping crime, making the world a better place, you know, all that awesome stuff. And I have an awesome power. Pretty good for an early Christmas present.
 
-#Chapter 2
+# Chapter 2
 
 I just checked on the google doc where I keep this, and apparently I wrote another thousand words. So here's another chapter.
 
@@ -354,7 +354,7 @@ ShwooshShwooshSwooshShwooshShwooshSwooshSwoosh
 
 I continued stopping crime at a very high speed for the next two days, while researching various things on my computer. I decided to stay out of the way of any parahumans, but otherwise I stopped pretty much every crime I saw.
 
-#Chapter 3
+# Chapter 3
 
 I figured writing more of this is better than not writing at all, and I'm not really in the mood to write more of my other fanfiction, Banter, so I wrote another thousand words of this.
 
@@ -427,7 +427,7 @@ Yeah, I'd be no better than anyone else if Leviathan or Behemoth came. I guess I
 
 I can't think of any other threats worth coming up with a plan for right now. The other S-Class threats, Sleeper and Ash Beast are on the other side of the planet, and are pretty slow moving. Oh right, I almost forgot about Nilbog. I guess I could just deal with him like I would deal with the Slaughterhouse 9? I would be surprised if he ever left Ellisburg though. So yeah, planning is done. Back to stopping crime until my costume is finished.
 
-#Chapter 4
+# Chapter 4
 
 I like writing this story a lot. Even though it's probably a lot worse than my other story. Anyways, here's another chapter.
 
@@ -612,7 +612,7 @@ I realized that wasn't the problem. The problem was that she didn't have any fri
 
 "Okay." Taylor got up, picked up her backpack, and went off to continue school.
 
-#Chapter 5
+# Chapter 5
 
 A chapter in which I try to make Cetacean less of a Mary Sue.
 
@@ -820,7 +820,7 @@ She stopped. "You… caused… that!?" She pointed at Lung.
 
 "Right." I watched as she walked away.
 
-#Chapter 6
+# Chapter 6
 
 So, Taylor's gonna be an independent hero now. She'll fight parahumans, which actually makes more sense for her, given the power that I caused her to end up with. I suggested that she name herself Distribution, given that her power distributes nearby powers between herself and the owner of the power. She reluctantly accepted, but only because she couldn't come up with her own name.
 

@@ -1,8 +1,8 @@
-#Full Vial
+# Full Vial
 
-Full Vial was probably my most ambitious fanfiction. I had started actually having beta readers read it, to make sure it would be good. Turns out, that just made me realize I wasn't good enough to write something with such an ambitious premise, which is why I ended up giving up after only 2 chapters. I may actually continue it from the first chapter, which was fairly good, but I probably won't. Also, I'm including author's notes here since they show a bit of my thought process while writing this. You can read it in the form I originally posted it on Spacebattles [here](https://forums.spacebattles.com/threads/full-vial-worm-au.784246/) and on Sufficient Velocity [here](https://forums.sufficientvelocity.com/threads/full-vial-worm-au.57378/#post-12974320).
+Full Vial was probably my most ambitious fanfiction. I had started actually having beta readers read it, to make sure it would be good. Turns out, that just made me realize I wasn't good enough to write something with such an ambitious premise, which is why I ended up giving up after only 2 chapters. I may actually continue it from the first chapter, which was fairly good, but I probably won't. Also, I'm including author's notes here since they show a bit of my thought process while writing this. You can read it in the form I originally posted it on Spacebattles [here](https://forums.spacebattles.com/threads/full-vial-worm-au.784246/) and on Sufficient Velocity [here](https://forums.sufficientvelocity.com/threads/full-vial-worm-au.57378/# post-12974320).
 
-#Prologue
+# Prologue
 
 So, I'm not very good at writing well established characters. This has lead to me having problems writing my other two stories, as in Cetacean, I'm currently dealing with Taylor, and in Banter, Taylor and Emma are two of the main characters. So, I figured that this story would actually go a lot better than the other two, since it's mostly about characters with a small amount of characterization.
 
@@ -116,7 +116,7 @@ I figured that anything that vial could do to me would be better than this. "Iâ€
 
 He helped me pour the contents of the vial into my mouth. At first, it was nothing. And then, I screamed.
 
-#Chapter 1
+# Chapter 1
 
 This is the actual Chapter 1. However, unless you literally just read 17.6 of Worm, you should still read the Prologue above.
 
@@ -268,7 +268,7 @@ Luke could speed things up, Mars could create suns, and Cody could send things b
 
 "So, we all have powers then," I said. "What do we do now?"
 
-#Chapter 2
+# Chapter 2
 
 I got a bit distracted for a week, but I finally finished the second chapter! This chapter was beta read by Vilheim, who helped a lot with editing.
 

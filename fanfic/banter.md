@@ -1,8 +1,8 @@
-#Banter
+# Banter
 
-Banter is the first fanfiction I ever wrote, and the first writing I ever put publicly on the internet. That lack of experience shows. I've included the author's notes here, since I feel like they contextualize some things. You can read it in the form I originally posted it on Spacebattles [here](https://forums.spacebattles.com/threads/banter-altpower-taylor.774622/#post-59960716) and on Sufficient Velocity [here](https://forums.sufficientvelocity.com/threads/banter-altpower-taylor.57375/#post-12974271).
+Banter is the first fanfiction I ever wrote, and the first writing I ever put publicly on the internet. That lack of experience shows. I've included the author's notes here, since I feel like they contextualize some things. You can read it in the form I originally posted it on Spacebattles [here](https://forums.spacebattles.com/threads/banter-altpower-taylor.774622/# post-59960716) and on Sufficient Velocity [here](https://forums.sufficientvelocity.com/threads/banter-altpower-taylor.57375/# post-12974271).
 
-#Chapter 1
+# Chapter 1
 
 I recently discovered Worm fanfiction, and came up with some ideas to write some. I decided to start with the one I was least attached to, write a first chapter, and attempt to revise it based on what people said. I'm kind of new to forums in general, as well as fanfiction in general, so if I do anything wrong, or stupid, or rude, or otherwise bad, tell me. I tried to read all of the rules, but there didn't seem to be very many, so I'm afraid I missed some.
 
@@ -211,7 +211,7 @@ Sophia stuttered. "Um, Maybe?"
 
 I realized what had happened, and by the look on Carlos' face, he had too. I had used my power when I was screaming in that locker. Carlos suddenly started talking. "Both of you, stop talking! Taylor is clearly a much more powerful Master than she realized, to the point of causing a trigger event. We need to find out the details of her power before we let her say anything more."
 
-#Chapter 3
+# Chapter 3
 
 I stayed silent, not knowing if my powers would be able to make them change their minds about how dangerous I was before they retaliated. Carlos began walking out of the room, and gestured for me to follow.
 
@@ -302,7 +302,7 @@ I decided to tell Aegis. He was the leader of the Wards, he would know what to d
 
 "You need to find her, and convince her to stop being a villain." Carlos said. I nodded, and he continued. "Also, maybe try to get her to join the Wards?"
 
-#Chapter 4
+# Chapter 4
 
 I went on vacation for a bit, and this was a bit of an awkward chapter. Here it is:
 
@@ -422,7 +422,7 @@ Carlos looked thoughtful. "That could work." He said. "I'll talk about it, but y
 
 "Okay." I wasn't used to being feared, but since I have my power I had to deal with it. "Well, bye!" I waved, and left the building.
 
-#Chapter 5
+# Chapter 5
 
 School was surreal, knowing that Emma had a power, and everything she was doing to stand up against bullies was due to me mastering her. I was glad she was doing it, since my power kind of made it hard to stand up to bullies myself without risking a lot. Even with this, I couldn't allow myself to forgive Emma. It took being mastered to get her to stop bullying me, so even if she wasn't bullying me anymore, she wasn't a trustworthy friend.
 
@@ -486,7 +486,7 @@ We left the building, prepared to search for the Undersiders and take on any cri
 
 She continued talking, "So, the reason I'm talking to you all, is mainly just to make the Undersiders well known. Having more people know about us is great!" Is Chatterbox/Regent an idiot? There's now way an experienced villain like Regent would do something like this, but it didn't make sense for this to be just Chatterbox. "Also, if you want to pay tribute to us for whatever reason, our base is at –" Suddenly she was cut off. After a bit, her voice returned, "Apparently telling everyone in the city the location of our base is not an idea supported by the rest of the group. But, if you do want to give us tribute, just yell our name in the docks, we'll find you eventually. Bye!"
 
-#Chapter 6
+# Chapter 6
 
 School started, so I'll be writing chapters slower now. This compounds with the fact that it's difficult to write characters in confusing situation, which this chapter is:
 
@@ -576,7 +576,7 @@ Emma spoke first. "Why did you become a villain?" She asked.
 
 "Uh, okay." I said, "Bye." I waved as me and Emma left the cell.
 
-#Chapter 7
+# Chapter 7
 
 The next person for us to interrogate was Hellhound, Rachel Lindt. As soon as we walked into the room, Emma asked her first question. "Why did you become a villain?"
 
