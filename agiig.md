@@ -22,3 +22,5 @@ AGIIG stands for A Girl Interested In Gaming. This part of my website is where I
 [Hollow Knight](/reviews/hollow-knight.html)
 
 [Europa Universalis 4](/reviews/eu4.html)
+
+[Rain World](/reviews/rain-world.html)
