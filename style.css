@@ -25,6 +25,10 @@ body {
   color: #009999;
 }
 
+.logo {
+  margin-top: 20px;
+}
+
 .picture {
   border-radius: 5px;
 }
@@ -33,10 +37,10 @@ body {
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 #header {
-  margin-top: 1rem;
   margin-bottom: 1rem;
   background-color: #48BF91;
   border: 1px solid #0076BE;
@@ -51,4 +55,17 @@ body {
 
 #index {
   text-align: center;
+}
+
+#footer {
+  background-color: #8BD9C7;
+  margin-top: 20px;
+  color: #00AAAA;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #000000;
+}
+
+#logo-image {
+  filter: hue-rotate(120deg) saturate(90%) brightness(150%);
 }

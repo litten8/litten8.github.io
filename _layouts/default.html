@@ -6,8 +6,11 @@
   <title>{{ page.title }} - {{ site.title }}</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
 </head>
+
 <body>
   <div id="page">
+    <div class="logo"><a href="/"><img id="logo-image" class="picture" src="/logo-300.png" height="100"></a></div>
+
     <div id="header">
       <a href="/">Home</a>
       |
@@ -20,12 +23,13 @@
       <a href="/agrat.html">Agrat</a>
       |
       <a href="/fanfic.html">Fanfiction</a>
-      |
-      Contact Me: agwic@agwic.me
     </div>
     <div id="content">
       {{ content }}
     </div>
+  </div>
+  <div id="footer">
+    Contact Me: agwic@agwic.me
   </div>
 </body>
 </html>
