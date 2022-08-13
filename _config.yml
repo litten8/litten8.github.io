@@ -1,7 +1,0 @@
-title: A Girl Who is Creative
-url: "https://agwic.me"
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
